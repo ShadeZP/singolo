@@ -1,0 +1,25 @@
+.header__wrapper {
+    width: 1020px;
+    height: 95px;
+    background-color: #2d303a;
+    border-bottom: 6px solid #323746;;
+}
+
+.navigation {
+    display: flex;
+    width: 371px;
+    height: 9px;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.header__text {
+color: #ffffff;
+font-family: Lato;
+font-size: 12px;
+text-transform: uppercase;
+}
+
+.text_colored {
+        color: red;
+}
