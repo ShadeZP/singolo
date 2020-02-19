@@ -1,3 +1,5 @@
+@import "assets/fonts/fonts.css";
+
 *{
     margin: 0px;    
 }
@@ -10,60 +12,71 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 auto;
 }
 
 .header {
     height: 95px;
     background-color: #2d303a;
-    border-bottom: 6px solid blue;
+    border-bottom: 6px solid #323746;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
     font-size: 25px;
     line-height: 25px;
-    font-weight: bold;
+    font-weight: 700;
     color: #ffffff;
+    font-family: "Lato";
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: -0.7px;
   }
   
   .logo::after {
+    font-family: "Lato";
     content: "*";
     color: #f06c64;
   }
 
 .header__navigation {
+    padding: 0;
     display: flex;
-    width: 371px;
-    height: 9px;
-    list-style-type: none;
+    list-style: none;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 700;
+    padding-top: 8px;
 }
 
 .header__navigation-text {
-    color: #ffffff;
-    font-family: Lato;
-    font-size: 12px;
-    text-transform: uppercase;
     position: relative;
-    padding: 0px;
+    height: 30px;
+    margin-left: 28.67px;
+    margin-top: 18px;
 }
 
-/*.header__navigation-text::before {
-    content: "·";
-    color:red;
+.header__navigation-text a {
+    color: #ffffff;
+    font-family: "Lato";
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    height: 100%;
+}
+
+.header__navigation-text:not(:first-child)::before {
+    content: ".";
+    color:#494e62;
     position: absolute;
     left: -16px;
+    top: -2px;
 }
 
-.header__text:hover {
-    color: #f06c64;
-    cursor: pointer;
+.header__navigation-text a:hover {
+  color: #f06c64;
 }
 
-/* Ошибка в понимании макета, добавить HOVER
-.text_colored {
-        color: red;
-}
-*/
