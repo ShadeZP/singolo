@@ -10,9 +10,9 @@
     padding: 0px 40px;
     box-sizing: border-box;
     display: flex;
-    align-items: center;
+    /*align-items: center;*/
     justify-content: space-between;
-    /*margin: 0 auto;*/
+    margin: 0 auto;
 }
 
 .header {
@@ -25,16 +25,16 @@
     justify-content: space-between;
 }
 
-.logo {
+.header-logo {
     font-size: 25px;
-    line-height: 6px;
+    /*line-height: 6px;*/
     font-weight: 700;
     color: #ffffff;
     font-family: "Lato";
     text-transform: uppercase;
-    text-decoration: none;
+    /*text-decoration: none;*/
     letter-spacing: -0.7px;
-    margin: 2px 0px 0px 0px;
+    margin: 34px 0px 0px 0px;
   }
   
   .logo::after {
@@ -43,21 +43,23 @@
     color: #f06c64;
   }
 
+.navigation {
+  padding-top: 45px;
+}
+
 .header__navigation {
-    padding: 0;
     display: flex;
+    justify-content: space-between;
     list-style: none;
     font-size: 12px;
     line-height: 12px;
     font-weight: 700;
-    padding-top: 8px;
+    width: 371px;
 }
 
 .header__navigation-text {
     position: relative;
     height: 30px;
-    margin-left: 28.67px;
-    margin-top: 18px;
 }
 
 .header__navigation-text a {
