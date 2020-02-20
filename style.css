@@ -25,7 +25,7 @@
     justify-content: space-between;
 }
 
-.header-logo {
+.header__logo {
     font-size: 25px;
     /*line-height: 6px;*/
     font-weight: 700;
@@ -37,17 +37,17 @@
     margin: 34px 0px 0px 0px;
   }
   
-  .logo::after {
+  .header__logo::after {
     font-family: "Lato";
     content: "*";
     color: #f06c64;
   }
 
-.navigation {
+.header__navigation {
   padding-top: 45px;
 }
 
-.header__navigation {
+.navigation {
     display: flex;
     justify-content: space-between;
     list-style: none;
@@ -57,12 +57,12 @@
     width: 371px;
 }
 
-.header__navigation-text {
+.navigation__text {
     position: relative;
     height: 30px;
 }
 
-.header__navigation-text a {
+.navigation__text a {
     color: #ffffff;
     font-family: "Lato";
     text-decoration: none;
@@ -71,7 +71,7 @@
     height: 100%;
 }
 
-.header__navigation-text:not(:first-child)::before {
+.navigation__text:not(:first-child)::before {
     content: ".";
     color:#494e62;
     position: absolute;
@@ -79,7 +79,7 @@
     top: -2px;
 }
 
-.header__navigation-text a:hover {
+.navigation__text a:hover {
   color: #f06c64;
 }
 
