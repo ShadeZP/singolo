@@ -178,16 +178,19 @@
   padding: 18px 0px 0px 0px;
 }
 
+.list__item {
+  padding-top: 27px;
+}
+
 .item {
   flex: 0 1 300px;
   display: flex;
   align-items: flex-start;
-  padding-top: 27px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.paragraph {
+.item__paragraph {
   padding-left: 20px;
 }
 
