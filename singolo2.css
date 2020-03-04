@@ -171,13 +171,12 @@ body {
     background-color: hotpink;
 }
 
-
 .social-media {
     display: flex;
 }
 
 .employee__contacts {
-    margin: 25px auto 0 auto;
+    margin: 24px auto 0 auto;
 }  
  
 
