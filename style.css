@@ -302,6 +302,10 @@
     margin-bottom: 20px;
 }
 
+.projects__link:nth-child(n+13) {
+    display: none;
+}
+
 .about-us {
     background-color: #f2f2f2;
     border-bottom: 6px solid #ffffff;
@@ -350,8 +354,9 @@
     font-weight: 900;
     margin: 12px 0 0 0;
     letter-spacing: -0.2px;
+    overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    text-align: justify;
 }
 
 .employee__description {
