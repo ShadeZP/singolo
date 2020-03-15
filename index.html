@@ -225,8 +225,8 @@
                     <form action="#" class="form">
                         <input class="form__input" type="text" name="name" placeholder="Name (Required)" required>
                         <input class="form__input" type="email" name="email" placeholder="Email (Required)" required>
-                        <input class="form__input" type="text" name="subject" placeholder="Subject" >
-                        <textarea class="form__input form__input_textarea" cols="30" rows="8" placeholder="Describe your project in detail."></textarea>
+                        <input maxlength="80" id="subject-text" class="form__input" type="text" name="subject" placeholder="Subject" >
+                        <textarea maxlength="400" class="form__input form__input_textarea" cols="30" rows="8" placeholder="Describe your project in detail."></textarea>
                         <button type="submit" class="form__button">Submit</button>
                     </form>
                     <div class="get-a-quote__contact-information contact-information">
@@ -244,6 +244,14 @@
                             <img class="contact-information__image" src="assets/img/icons/email.png" alt="email" width="13" height="8"/>
                             info@singolo.com
                         </a>
+                    </div>
+                    <div class="popup popup_hidden" id="popup_msg">
+                        <div class="message">
+                            <p>Письмо отправлено</p>
+                            <p id="popup-subject" class="popup__text"></p>
+                            <p id="popup-message" class="popup__text"></p>
+                            <button id="btn-close">OK</button>
+                        </div>
                     </div>
                 </div>
             </div>

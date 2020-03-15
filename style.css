@@ -645,4 +645,35 @@ button, input, textarea {
     line-height: 6px;
     color: #666d89;
     letter-spacing: -0.144px;
-  }
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background: #0008;
+}
+
+.popup > .message {
+    position: absolute;
+    top: 360px;
+    left: calc(50vw - 150px);
+    width: 300px;
+    background-color: #f06c64;
+    color: #f0d8d9;
+    padding: 5px;
+    text-align: center;
+}
+
+.popup__text {
+    text-align: left;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.popup_hidden {
+    display: none;
+}
