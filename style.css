@@ -88,8 +88,12 @@ html {
     top: -2px;
 }
 
+.navigation__text_active a {
+    color: #f06c64;
+}
+
 .navigation__text a:hover {
-  color: #f06c64;
+    color: #f06c64;
 }
 
 .slider {
