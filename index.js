@@ -1,6 +1,7 @@
 const MENU = document.querySelector ('.navigation');
 const FORM = document.querySelector('.form');
 const CLOSE_BUTTON = document.querySelector('#btn-close');
+const PORTFOLIO = document.querySelector ('.portfolio__table')
 
 //HEADER
 
@@ -31,5 +32,20 @@ FORM.addEventListener('submit',  event => {
 
 CLOSE_BUTTON.addEventListener ('click',  (event) => {
     if (event.target.id === 'btn-close'){
-        document.querySelector('#popup_msg').classList.add('popup_hidden');}
+        document.querySelector('.popup').classList.add('popup_hidden');}
+});
+
+// Portfolio. Взаимодействие с картинками
+
+PORTFOLIO.addEventListener ('click', (event) => {
+    const project = event.target.parentNode;
+    event.preventDefault()
+    console.log (project)
+    if (project.className === 'projects__link'){
+        PORTFOLIO.querySelectorAll('a').forEach(el => {
+            el.classList.remove ('projects__link_active')
+        });
+        console.log (event.target);
+        project.classList.add('projects__link_active')
+    }
 });

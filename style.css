@@ -315,6 +315,10 @@ html {
     overflow: hidden;
 }
 
+.projects__link_active {
+    outline: 5px solid #f06c64;
+}
+
 .projects__link {
     height: 187px;
     margin-bottom: 20px;
