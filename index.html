@@ -26,15 +26,31 @@
             <div class="wrapper slider__wrapper">
                 <div class="container">
                     <div class="arrow-block slider__button">
-                        <button type="button" class="arrow-block__arrow"></button>
-                        <button type="button" class="arrow-block__arrow arrow-block__arrow_rotate"></button>
+                        <button id="left" type="button" class="arrow-block__arrow"></button>
+                        <button id="right" type="button" class="arrow-block__arrow arrow-block__arrow_rotate"></button>
                     </div>
-                    <div class="slider__phone-vertical">
-                        <img class="" src="./assets/img/iPhone_Vertical.png" alt="iPhone_Vertical">
+                    <div class="carousel">
+                        <div class="slide slide_active">
+                            <div class="slide1">
+                                <div class="slider__phone-vertical">
+                                    <img class="iPhone_Vertical" src="./assets/img/iPhone_Vertical.png" alt="iPhone_Vertical">
+                                    <div class="displayVertical"></div>
+                                </div>
+                                <div class="slider__phone-horizontal">
+                                    <img class="iPhone_Horizontal" src="./assets/img/iPhone_Horizontal.png" alt="iPhone_Horizontal">
+                                    <div class="displayHorizontal"></div>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img class="slide2" src="./assets/img/Group 2.png">
+                            <!-- <div class="slide2">
+                                <img class="phone_left" src="./assets/img/slider-content.png">
+                                <img class="phone_centre" src="./assets/img/slider-content-2.png">
+                                <img class="phone_right" src="./assets/img/slider-content-1.png">
+                            </div> -->
                     </div>
-                    <div class="slider__phone-horizontal">
-                        <img class="" src="./assets/img/iPhone_Horizontal.png" alt="iPhone_Horizontal">
-                    </div>    
+                    </div>
                 </div>               
             </div>
         </section>
@@ -105,14 +121,14 @@
                 <h2 class="portfolio__title">Portfolio</h2>
                 <p class="portfolio__text"> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>        
             <div class="portfolio__tags">
-                <ul class="tags">
+                <ul class="tags" id="tags">
                     <li class="tags__item tags__item_active">All</li>
                     <li class="tags__item">Web Design</li>
                     <li class="tags__item">Graphic Design</li>
                     <li class="tags__item">Artwork</li>
                 </ul>
             </div>
-            <div class="projects portfolio__table">
+            <div class="projects portfolio__table" id="portfolio__table">
                 <a href="#" class="projects__link">
                     <img src="assets/img/project1.png" alt="project1" class="projects__photo" width="220" height="187">
                 </a> 
