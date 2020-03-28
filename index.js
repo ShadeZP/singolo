@@ -210,3 +210,5 @@ function toggleClasses() {
     MENU.classList.toggle("navbar_mobile")
     headerWrapper.classList.toggle("header__wrapper_menu-open")
 }
+
+// wtf
