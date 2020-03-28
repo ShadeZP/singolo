@@ -181,7 +181,6 @@ menuModal.addEventListener("click", closeMenuHandler)
 
 function closeMenuHandler(event) {
   event.target.dataset.close && isMenuOpen ? closeMenu() : null
-  console.log(event.target);
 }
 
 function menuClickHandler() {
