@@ -43,7 +43,122 @@ html {
     justify-content: space-between; */
 }
 
+.header__menu {
+    position: fixed;
+    top: 26px;
+    left: 20px;
+    z-index: 22;
+    display: none;
+    align-items: center;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.3s, top 0.3s;
+  }
+  
+  .header__menu::before, .header__menu::after {
+    position: absolute;
+    content: "";
+  }
+  
+  .header__menu::before {
+    top: 0;
+  }
+  
+  .header__menu::after {
+    bottom: 0;
+  }
+  
+  .header__menu span,
+  .header__menu::before,
+  .header__menu::after {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+  }
+  
+  .header__menu_small {
+    top: 10px;
+  }
+  
+  .header__menu_open {
+    transform: rotate(-90deg);
+  }
+  
+  .menu-modal {
+    position: absolute;
+    z-index: -1;
+    visibility: hidden;
+  }
+  
+  .menu-modal__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.4s;
+  }
+
+  .nav-mobile {
+    display: flex;
+    position: relative;
+    z-index: 22;
+    width: 278px;
+    height: 100vh;
+    padding-left: 71px;
+    background-color: #2d303a;
+    box-shadow: 0 -40px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s;
+    transform: translateX(-100%);
+  }
+  
+  .navbar_mobile {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar_mobile .navigation__text {
+    margin-left: 0;
+  }
+  
+  .navbar_mobile .navigation__text {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  
+  .navbar_mobile .navigation__text:not(:first-child) {
+    margin-top: 27px;
+  }
+  
+  .navbar_mobile .navigation__text + .navigation__text::before {
+    display: none;
+  }
+  
+  .menu-modal_open {
+    z-index: 20;
+    visibility: visible;
+  }
+  
+  .menu-modal_open .menu-modal__overlay {
+    z-index: 21;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .menu-modal_open .nav-mobile {
+    transform: translateX(0%);
+  }
+  
+  .menu-modal_hide {
+    z-index: 20;
+    visibility: initial;
+  }
+
 .header__logo {
+    z-index: 22;
     font-size: 25px;
     font-weight: 700;
     color: #ffffff;
@@ -845,7 +960,7 @@ button, input, textarea {
 
     .slide2 {
         width: 300px;
-        margin: 43px 0 0 212px;
+        margin: 43px 0 0 35%;
     }
 
     .slider {
@@ -930,12 +1045,13 @@ button, input, textarea {
 
     .arrow-block__arrow {        
         width: 14px;
-        height: 25px;        
+        height: 25px;   
+        z-index: 3;     
     }
 
     .slide2 {
         width: 100px;
-        margin: 43px 0 0 130px;
+        margin: 43px 0 0 35%;
     }
 
     .our-services__wrapper {
@@ -1021,10 +1137,9 @@ button, input, textarea {
 
     .form__button {
         height: 50px;
-        max-width: 100%;
+        width: 100%;
         margin-top: 14px;
     }
-
 
     .get-a-quote__contact-information {
 
@@ -1044,9 +1159,9 @@ button, input, textarea {
         padding-right: 0px;
     }
 
-    .header__navigation {
+    /* .header__navigation {
         display: none;
-    }
+    } */
 
     .header__wrapper{
         justify-content: center;
@@ -1060,4 +1175,183 @@ button, input, textarea {
         margin: 22px 0px 0px 0px;
     }
 
+    .header__wrapper_menu-open {
+        justify-content: start;
+        padding-left: 71px;
+      }
+    
+    .header .nav {
+        display: none;
+    }
+
+    .header__menu {
+        display: flex;
+    }
+
+    .logo {
+        margin: 25px 0 20px 0;
+    }
+
+    .logo_small {
+        margin: 10px 0 4px 0;
+    }
+
+    .navigation {
+        align-self: center;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .iPhone_Vertical {
+        width: 80px;
+    }
+
+
+    .iPhone_Horizontal {
+        width: 150px;
+    }
+
+    .slide2 {
+        width: 100px;
+        margin: 43px 0 0 35%;
+    }
+
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 13px;
+        row-gap: 7px;
+    }
+
+    .tags__item {
+        font-size: 9px;
+    }
+
+    .portfolio {
+        height: 700px;
+    }
+
+    .portfolio__table > a > img {
+        width: 120px;
+        height: 100px;
+    }
+
+    .portfolio__table {
+        margin: 19px 30px 0 30px;
+    }
+
+    .projects__link {
+        height: 100%;
+        margin-bottom: 0px;
+    }
+
+    .three-column-layout {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .about-us__title {
+        margin: 1px 0 0 30px;
+    }
+
+    .about-us__text {
+        margin: 14px 0 0 30px; 
+        width: 250px; 
+        height: 250px;
+    }
+
+    .about-us__staff {
+        margin: 14px 22px 0 30px;
+        row-gap: 34px;
+    }
+
+    .employee__photo, .employee__description {
+        width: 260px;
+    }
+
+    .about-us__wrapper {
+        padding: 67px 0 45px 0;
+    }
+
+    .get-a-quote__wrapper {
+        padding: 64px 30px 22px 30px;
+        box-sizing: border-box;
+    }
+
+    .wrapper{
+        max-width: 768px;
+    }
+
+    .form {
+        min-width: 260px;
+    }
+
+    .get-a-quote__form {
+        flex-direction: column;
+    }
+
+    .form__button {
+        height: 50px;
+        max-width: 100%;
+        margin-top: 14px;
+    }
+
+    .get-a-quote__contact-information {
+        margin: 32px 0 0 0;
+    }
+
+    .contact-information__location { 
+        margin: 5px 0 0 0;
+    }
+
+    .footer__copyright {
+        display: none;
+    }
+
+    .footer__social-media {
+        margin: 0 auto;
+        padding-right: 0px;
+    }
+
+    /* .header__navigation {
+        display: none;
+    } */
+
+    .header__wrapper{
+        justify-content: center;
+    }
+
+    .header {
+        height: 65px;
+    }
+
+    .header__logo {
+        margin: 22px 0px 0px 0px;
+    }
+
+    .header__wrapper_menu-open {
+        justify-content: start;
+        padding-left: 71px;
+      }
+    
+    .header .nav {
+        display: none;
+    }
+
+    .header__menu {
+        display: flex;
+    }
+
+    .logo {
+        margin: 25px 0 20px 0;
+    }
+
+    .logo_small {
+        margin: 10px 0 4px 0;
+    }
+
+    .navigation {
+        align-self: center;
+    }    
 }

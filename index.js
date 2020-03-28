@@ -167,3 +167,46 @@ SLIDER.addEventListener ('click', event =>{
 
     }
 )
+
+// Menu mobile
+const MENU_MOBILE = document.querySelector(".header__menu")
+const menuModal = document.querySelector(".menu-modal")
+const navMobile = document.querySelector(".nav-mobile")
+const navDesktop = document.querySelector(".nav")
+const headerWrapper = document.querySelector(".header__wrapper")
+let isMenuOpen = false
+
+MENU_MOBILE.addEventListener("click", menuClickHandler)
+menuModal.addEventListener("click", closeMenuHandler)
+
+function closeMenuHandler(event) {
+  event.target.dataset.close && isMenuOpen ? closeMenu() : null
+  console.log(event.target);
+}
+
+function menuClickHandler() {
+  isMenuOpen ? closeMenu() : openMenu()
+}
+
+function openMenu() {
+  toggleClasses()
+  isMenuOpen = true
+  navMobile.append(MENU)
+}
+
+function closeMenu() {
+  toggleClasses()
+  isMenuOpen = false
+  menuModal.classList.add("menu-modal_hide")
+  setTimeout(() => {
+    menuModal.classList.remove("menu-modal_hide")
+  }, 400)
+  navDesktop.append(MENU)
+}
+
+function toggleClasses() {
+    MENU_MOBILE.classList.toggle("header__menu_open")
+    menuModal.classList.toggle("menu-modal_open")
+    MENU.classList.toggle("navbar_mobile")
+    headerWrapper.classList.toggle("header__wrapper_menu-open")
+}

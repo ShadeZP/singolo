@@ -9,14 +9,20 @@
 <body>
     <header class="header">
         <div class="wrapper header__wrapper">
+            <div class="header__menu"><span></span></div>
+            <div class="menu-modal">
+                <div class="menu-modal__overlay" data-close="true">
+                    <nav class="nav-mobile"></nav>
+                </div>
+            </div>
             <h1 class="header__logo">singolo</h1>
-            <nav>
+            <nav class="nav">
                 <ul class="navigation header__navigation">
                     <li class="navigation__text"><a href="#">Home</a></li>
-                    <li class="navigation__text"><a href="#services">Services</a></li>
-                    <li class="navigation__text"><a href="#portfolio">Portfolio</a></li>
-                    <li class="navigation__text"><a href="#about">About</a></li>
-                    <li class="navigation__text"><a href="#contact">Contact</a></li>
+                    <li class="navigation__text"><a href="#services" data-close="true">Services</a></li>
+                    <li class="navigation__text"><a href="#portfolio" data-close="true">Portfolio</a></li>
+                    <li class="navigation__text"><a href="#about" data-close="true">About</a></li>
+                    <li class="navigation__text"><a href="#contact" data-close="true">Contact</a></li>
                 </ul>
             </nav>
         </div>
